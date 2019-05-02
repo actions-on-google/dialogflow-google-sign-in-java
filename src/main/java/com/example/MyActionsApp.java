@@ -29,10 +29,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Implements all intent handlers for this Action. Note that your App must
- * extend from DialogflowApp if using Dialogflow or ActionsSdkApp for ActionsSDK
- * based Actions.
+ * Tip: Sign In should not happen in the Default Welcome Intent, instead
+ * later in the conversation.
+ * See `Action discovery` docs:
+ * https://developers.google.com/actions/discovery/implicit#action_discovery
  */
+
 public class MyActionsApp extends DialogflowApp {
 
   private static final Logger LOGGER = LoggerFactory
@@ -98,9 +100,6 @@ public class MyActionsApp extends DialogflowApp {
       LOGGER.info("Give color intent end.");
       return responseBuilder.build();
     }
-    // Sign In should happen later in the conversation and not in welcome intent
-    // See `Action discovery` docs: `Don't block your flow with account linking`
-    // https://developers.google.com/actions/discovery/implicit#action_discovery
     responseBuilder.add(
         new SignIn()
             .setContext(String.format(rb.getString("signin_prompt"), color)));
