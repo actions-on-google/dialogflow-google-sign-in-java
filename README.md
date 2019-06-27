@@ -12,15 +12,15 @@ This sample demonstrates Actions on Google features for use on Google Assistant 
 
 ### Configuration
 #### Actions Console
-1. From the [Actions on Google Console](https://console.actions.google.com/), add a new project (this will become your *Project ID*) > **Create Project** > under **More options** > **Conversational**.
-1. On the left navigation menu under **Advanced Options** > **Account linking**:
+1. From the [Actions on Google Console](https://console.actions.google.com/), New project (this will become your *Project ID*) > **Create project** > under **More options** > **Conversational**.
+1. From the top navigation menu under **Develop** > **Account linking** (left nav):
    + **Account creation** > select `Yes, allow users to sign up for new accounts via voice`.
    + **Linking type** > select `Google Sign In`.
    + **Client information** > copy **Client ID** > **Save**.
 1. In `src/main/java/com/example/Constants.java`
    + Update `clientId` to the value copied in the previous step
    + Update `databaseUrl` to `https://<YOUR-PROJECT-ID>.firebaseio.com` with your *Project ID*.
-1. From the left navigation menu under **Build** > **Actions** > **Add Your First Action** > **BUILD** (this will bring you to the Dialogflow console) > Select language and time zone > **CREATE**.
+1. From the top navigation menu under **Develop** > **Actions** (left nav) > **Add your first action** > **BUILD** (this will bring you to the Dialogflow console) > Select language and time zone > **CREATE**.
 1. In Dialogflow, go to **Settings** ⚙ > **Export and Import** > **Restore from zip**.
    + Follow the directions to restore from the `agent.zip` file in this repo.
 
@@ -34,7 +34,6 @@ This sample demonstrates Actions on Google features for use on Google Assistant 
 1. **Project Overview** > under **Add Firebase to your app** > select the **web icon** > copy the config contents into `src/main/webapp/webapp.html`
 
 #### App Engine Deployment & Webhook Configuration
-When a new project is created using the Actions Console, it also creates a Google Cloud project in the background.
 1. Configure the gcloud CLI and set your Google Cloud project to the name of your Actions on Google Project ID, which you can find from the [Actions on Google console](https://console.actions.google.com/) under Settings ⚙
    + `gcloud init`
 1. Deploy to [App Engine using Gradle](https://cloud.google.com/appengine/docs/flexible/java/using-gradle):
