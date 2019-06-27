@@ -50,6 +50,15 @@ public class MyActionsApp extends DialogflowApp {
     LOGGER.info("Welcome intent start.");
     ResponseBuilder responseBuilder = getResponseBuilder(request);
     ResourceBundle rb = ResourceBundle.getBundle("resources");
+
+    // Account Linking is only supported for verified users
+    // https://developers.google.com/actions/assistant/guest-users
+    if (!request.getUser().getUserVerificationStatus().equals("VERIFIED")) {
+      responseBuilder.add(rb.getString("welcome_guest"));
+      responseBuilder.endConversation();
+      return responseBuilder.build();
+    }
+
     if (userIsSignedIn(request)) {
       GoogleIdToken.Payload profile = getUserProfile(
           request.getUser().getIdToken());
