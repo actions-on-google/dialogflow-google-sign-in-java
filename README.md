@@ -1,6 +1,6 @@
 # Actions on Google: Account Linking with Google Sign-In Sample
 
-This sample demonstrates Actions on Google features for use on Google Assistant including account linking and [Google Sign In](https://developers.google.com/actions/identity/google-sign-in) -- using the [Java client library](https://github.com/actions-on-google/actions-on-google-java), [Firebase Authentication](https://firebase.google.com/docs/auth/), and deployed on [App Engine](https://cloud.google.com/appengine/docs/standard/java/quickstart).
+This sample demonstrates Actions on Google features for use on Google Assistant including account linking and [Google Sign In](https://developers.google.com/assistant/identity/google-sign-in) -- using the [Java client library](https://github.com/actions-on-google/actions-on-google-java), [Firebase Authentication](https://firebase.google.com/docs/auth/), and deployed on [App Engine](https://cloud.google.com/appengine/docs/standard/java/quickstart).
 
 ### Setup Instructions
 ### Prerequisites
@@ -60,9 +60,9 @@ Return to the [Dialogflow Console](https://console.dialogflow.com), from the lef
 + If running into issues after following the above steps, clear your browser's cache and make sure pop ups are allowed.
 
 ### References & Issues
-+ Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google), [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/) or [Support](https://developers.google.com/actions/support/).
++ Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google), [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/) or [Support](https://developers.google.com/assistant/support).
 + For bugs, please report an issue on Github.
-+ Actions on Google [Documentation](https://developers.google.com/actions/extending-the-assistant)
++ Actions on Google [Documentation](https://developers.google.com/assistant)
 + [Webhook Boilerplate Template](https://github.com/actions-on-google/dialogflow-webhook-boilerplate-java) for Actions on Google.
 + More info about [Gradle & the App Engine Plugin](https://cloud.google.com/appengine/docs/flexible/java/using-gradle).
 + More info about deploying [Java apps with App Engine](https://cloud.google.com/appengine/docs/standard/java/quickstart).
